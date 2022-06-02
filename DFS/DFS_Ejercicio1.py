@@ -22,4 +22,25 @@ def print_adj_lista(self):# Representacion grafica def
         #Numeros de nodos claves
         for llave in self.m_adj_lista.keys(): 
             print("nodo", llave, ": ", self.m_adj_lista[llave])# Imprime los nodos con la llave
- 
+
+
+#actua
+ #Agregamos el nodo de inicio al comienzo de nuestra ruta transversal y lo marcamos como 
+ # visitado al agregarlo a un conjunto de nodos visitados
+def dfs(self, inicio, objetivo, ruta = [], visita = set()): #creamos una lsita vacia de la ruta y el objetivo   
+        ruta.append(inicio) 
+        #Agregamos el nodo de inicio al comienzo de nuestra ruta
+        visita.add(inicio)
+        if inicio == objetivo:  #y nos preguntamos si el inicio es igual al objetivo
+            return ruta # y nos devuele la ruta
+        #llamamos a la función recursivamente para cada uno de ellos
+        for (neighbour, peso) in self.m_adj_lista[inicio]: 
+            if neighbour not in visita:
+                resultado = self.dfs(neighbour, objetivo, ruta, visita)
+                if resultado is not None: 
+                    #guardamos una referencia al resultado
+                    return resultado
+                #hemos encontrado nuestro nodo de destino y 
+                # devolvemos la ruta transversal como resultado.
+        ruta.pop()
+        return None
