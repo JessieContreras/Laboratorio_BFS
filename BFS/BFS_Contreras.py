@@ -42,4 +42,8 @@ if __name__ == "__main__": #ejecuta el codigo que son importante en el módulo
     print("Busqueda por Anchura")
     #Ingreso de los datos
     """creamos una variables por cad auno de los datos que vamos a ingresar en este caso es de 8"""
-    
+    dato0=int(input("Ingrese un dato1: "))
+    dato1=int(input("Ingrese un dato2: "))
+    dato2=int(input("Ingrese un dato3: "))
+    dato3=int(input("Ingrese un dato4: "))
+    dato4=int(input("Ingrese un dato5: "))
