@@ -30,4 +30,13 @@ class grafo:
         ruta.append(inicio)
         #Agregamos el nodo de inicio al comienzo de nuestra ruta
         visita.add(inicio)
- 
+        
+        if inicio == objetivo: #y nos preguntamos si el inicio es igual al objetivo
+            return ruta# y nos devuele la ruta
+        #llamamos a la función recursivamente para cada uno de ellos
+        for (neighbour, peso) in self.m_adj_lista[inicio]:
+            if neighbour not in visita:
+                resultado = self.dfs(neighbour, objetivo, ruta, visita)
+                if resultado is not None:
+                    #guardamos una referencia al resultado
+                    return resultado
