@@ -55,3 +55,14 @@ if __name__ == "__main__": #ejecuta el codigo que son importante en el módulo
     grafo.add_edgrafo(dato1, dato2, dato1)   
     grafo.add_edgrafo(dato1, dato4, dato1) 
     grafo.add_edgrafo(dato2, dato3, dato2)
+    
+    
+     # Imprime las listas adyacentes  con su respectivo nodo y peso del borde.
+    grafo.print_adj_lista()
+    #Imprime el recorrido de la anchura que tiene el nodo.
+    print ("A continuación se muestra el primer recorrido en anchura"
+                    " (a partir del vértice 0)")
+    #Indica el número de búsqueda de anchura.
+    grafo.bfs_traversal(0) 
+    #Imprime los nodos en la cola por el lado mas cercano
+    print()
