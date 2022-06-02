@@ -23,4 +23,11 @@ class grafo:
         #Numeros de nodos claves
         for llave in self.m_adj_lista.keys(): 
             print("nodo", llave, ": ", self.m_adj_lista[llave])# Imprime los nodos con la llave
+            
+    #Agregamos el nodo de inicio al comienzo de nuestra ruta transversal y lo marcamos como 
+    # visitado al agregarlo a un conjunto de nodos visitados
+    def dfs(self, inicio, objetivo, ruta = [], visita = set()):
+        ruta.append(inicio)
+        #Agregamos el nodo de inicio al comienzo de nuestra ruta
+        visita.add(inicio)
  
