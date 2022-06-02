@@ -40,3 +40,8 @@ class grafo:
                 if resultado is not None:
                     #guardamos una referencia al resultado
                     return resultado
+                
+     #hemos encontrado nuestro nodo de destino y 
+     # devolvemos la ruta transversal como resultado.
+        ruta.pop()
+        return None
