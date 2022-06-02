@@ -37,3 +37,39 @@ class grafo:
                 if nodo_siguiente not in visita: #no ha sido visitado el nodo
                     queue.put(nodo_siguiente)#añade dentro de la cola
                     visita.add(nodo_siguiente) #agrega el dato
+if __name__ == "__main__": #ejecuta el codigo que son importante en el módulo
+   
+    grafo = grafo(7, dirigrafo=True) #Ingresamos el numero de datos a imprimir
+    print("Busqueda por Anchura")
+    #Ingreso de los datos
+    """creamos una variables por cada auno de los datos que vamos a ingresar en este caso es de 8"""
+   
+    dato1=int(input("Ingrese un dato1: "))
+    dato2=int(input("Ingrese un dato2: "))
+    dato3=int(input("Ingrese un dato3: "))
+    dato4=int(input("Ingrese un dato4: "))
+    dato5=int(input("Ingrese un dato5: "))
+    dato6=int(input("Ingrese un dato6: "))
+    dato7=int(input("Ingrese un dato7: "))
+    dato8=int(input("Ingrese un dato8: "))
+   
+    #Proceso de Agreguar bordes al gráfico con peso predeterminado = 1
+    """Esta la congugacion de cada uno de los valores dependeiendi el nodo al que se encuentra"""
+    grafo.add_edgrafo(dato1, dato2, dato1)
+    grafo.add_edgrafo(dato1, dato3, dato1)  
+    grafo.add_edgrafo(dato2,dato4,dato2)
+    grafo.add_edgrafo(dato2,dato5,dato2)
+    grafo.add_edgrafo(dato3,dato6,dato3)
+    grafo.add_edgrafo(dato3,dato7,dato3)
+    grafo.add_edgrafo(dato3,dato8,dato3)
+    grafo.add_edgrafo(dato5,dato6,dato5)
+ 
+    # Imprime las listas adyacentes  con su respectivo nodo y peso del borde.
+    grafo.print_adj_lista()
+    #Imprime el recorrido de la anchura que tiene el nodo.
+    print ("A continuación se muestra el primer recorrido en anchura"
+                    " (a partir del vértice 0)")
+    #Indica el número de búsqueda de anchura.
+    grafo.bfs_traversal(0)
+    #Imprime los nodos en la cola por el lado mas cercano
+    print(dato1, dato3, dato8)
