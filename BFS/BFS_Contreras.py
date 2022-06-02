@@ -19,4 +19,7 @@ class grafo:
         #Numeros de nodos claves
         for llave in self.m_adj_lista.keys(): 
             print("nodo", llave, ": ", self.m_adj_lista[llave])# Imprime los nodos con la llave
- 
+
+    def bfs_traversal(self, iniciar_nodo): #funcion para imprimir los recorridos
+        visita = set() #Conjunto de nodos visitados
+        queue = Queue() #conjunto de colas
