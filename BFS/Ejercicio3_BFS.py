@@ -31,7 +31,7 @@ class grafo:
  
         while not queue.empty(): #Cuando existen colas vacias.
            
-            actual_nodo = queue.get()  # scar de la cola los vértices.
+            actual_nodo = queue.get()  # sacar de la cola los vértices.
             print(actual_nodo, end = " ") #Imprime el estado actual de los nodos inicial y final
             for (nodo_siguiente, peso) in self.m_adj_lista[actual_nodo]:
                 if nodo_siguiente not in visita: #no ha sido visitado el nodo
@@ -55,5 +55,25 @@ if __name__ == "__main__": #ejecuta el codigo que son importante en el módulo
     dato8=int(input("Ingrese un dato8: "))
     dato9=int(input("Ingrese un dato9: "))
     dato10=int(input("Ingrese un dato10: "))
-   
+      #Proceso de Agregar a lo bordes al gráfico con peso predeterminado = 1
+    """Esta la conjugacion de cada uno de los valores dependiendo el nodo al que se encuentra"""
+    grafo.add_edgrafo(dato1, dato8, dato1)
+    grafo.add_edgrafo(dato1, dato5, dato1)  
+    grafo.add_edgrafo(dato1, dato2, dato1)
+    grafo.add_edgrafo(dato8,dato6,dato8)
+    grafo.add_edgrafo(dato8,dato4,dato8)
+    grafo.add_edgrafo(dato8,dato3,dato8)
+    grafo.add_edgrafo(dato2,dato9,dato2)
+    grafo.add_edgrafo(dato6,dato10,dato6)
+    grafo.add_edgrafo(dato6,dato10,dato6)
+ 
+    # Imprime las listas adyacentes  con su respectivo nodo y peso del borde.
+    grafo.print_adj_lista()
+    #Imprime el recorrido de la anchura que tiene el nodo.
+    print ("A continuación se muestra el primer recorrido en anchura"
+                    " (a partir del vértice 0)")
+    #Indica el número de búsqueda de anchura.
+    grafo.bfs_traversal(0)
+    #Imprime los nodos en la cola por el lado mas cercano
+    print(dato1, dato8, dato2, dato6, dato4, dato3, dato9, dato10, dato7)
  
