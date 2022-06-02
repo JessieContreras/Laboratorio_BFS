@@ -47,3 +47,11 @@ if __name__ == "__main__": #ejecuta el codigo que son importante en el módulo
     dato2=int(input("Ingrese un dato3: "))
     dato3=int(input("Ingrese un dato4: "))
     dato4=int(input("Ingrese un dato5: "))
+    
+    #Proceso de Agreguar bordes al gráfico con peso predeterminado = 1
+    """Esta la conjugacion de cada uno de los valores dependiendo el nodo al que se encuentra"""
+    grafo.add_edgrafo(dato0, dato1, dato0)
+    grafo.add_edgrafo(dato0, dato2, dato0)  
+    grafo.add_edgrafo(dato1, dato2, dato1)   
+    grafo.add_edgrafo(dato1, dato4, dato1) 
+    grafo.add_edgrafo(dato2, dato3, dato2)
