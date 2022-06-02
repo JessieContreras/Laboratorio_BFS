@@ -37,3 +37,23 @@ class grafo:
                 if nodo_siguiente not in visita: #no ha sido visitado el nodo
                     queue.put(nodo_siguiente)#añade dentro de la cola
                     visita.add(nodo_siguiente) #agrega el dato
+                    
+if __name__ == "__main__": #ejecuta el codigo que son importante en el módulo
+   
+    grafo = grafo(10, dirigrafo=True) #Ingresamos el numero de datos a imprimir
+    print("Busqueda por Anchura")
+    #Ingreso de los datos
+    """creamos una variables por cad auno de los datos que vamos a ingresar en este caso es de 8"""
+   
+    dato1=int(input("Ingrese un dato1: "))
+    dato2=int(input("Ingrese un dato2: "))
+    dato3=int(input("Ingrese un dato3: "))
+    dato4=int(input("Ingrese un dato4: "))
+    dato5=int(input("Ingrese un dato5: "))
+    dato6=int(input("Ingrese un dato6: "))
+    dato7=int(input("Ingrese un dato7: "))
+    dato8=int(input("Ingrese un dato8: "))
+    dato9=int(input("Ingrese un dato9: "))
+    dato10=int(input("Ingrese un dato10: "))
+   
+ 
