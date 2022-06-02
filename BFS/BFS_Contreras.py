@@ -23,3 +23,15 @@ class grafo:
     def bfs_traversal(self, iniciar_nodo): #funcion para imprimir los recorridos
         visita = set() #Conjunto de nodos visitados
         queue = Queue() #conjunto de colas
+
+        queue.put(iniciar_nodo) #añadir a la cola, la lista visitada
+        visita.add(iniciar_nodo)
+        
+        while not queue.empty(): #Cuando existen colas vacias.
+            
+            actual_nodo = queue.get()  # sacar de la cola los vértices.
+            print(actual_nodo, end = " ") #Imprime el estado actual de los nodos inicial y final
+            for (nodo_siguiente, peso) in self.m_adj_lista[actual_nodo]:
+                if nodo_siguiente not in visita: #no ha sido visitado el nodo
+                    queue.put(nodo_siguiente)#añade dentro de la cola
+                    visita.add(nodo_siguiente) #agrega el dato 
