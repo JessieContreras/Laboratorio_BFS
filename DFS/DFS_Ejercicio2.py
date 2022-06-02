@@ -61,3 +61,23 @@ if __name__ == "__main__":
     dato5=int(input("Ingrese un dato5: "))
     dato6=int(input("Ingrese un dato6: "))
     dato7=int(input("Ingrese un dato7: "))
+    
+     
+    #Proceso de Agreguar bordes al gráfico con peso predeterminado = 1
+    """Esta la congugacion de cada uno de los valores dependeiendi el nodo al que se encuentra"""
+    grafo.add_grafo(dato1, dato2)
+    grafo.add_grafo(dato2, dato3)
+    grafo.add_grafo(dato3, dato4)
+    grafo.add_grafo(dato4, dato5)
+    grafo.add_grafo(dato4, dato6)
+    grafo.add_grafo(dato4, dato7)
+    grafo.add_grafo(dato7, dato1)
+
+    
+    # Imprime las listas adyacentes  con su respectivo nodo y peso del borde.
+    grafo.print_adj_lista()
+    
+    traversal_path = []
+    traversal_path = grafo.dfs(0, 8)
+    print(f" El camino transversal del nodo 1 al 8 nodo es {dato1, dato2, dato3, dato4, dato5, dato6, dato7}")
+
