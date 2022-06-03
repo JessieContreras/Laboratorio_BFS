@@ -44,3 +44,8 @@ class grafo:
         ruta.pop()
         return None
 
+if __name__ == "__main__":
+    
+    #Esto creará la instancia del Grafo de gráfico no dirigido que representa con un N nodos
+    grafo = grafo(9, dirigrafo = False) #Ingresamos el numero de datos a imprimir
+    print("Busqueda por Profundidad")
