@@ -61,3 +61,14 @@ if __name__ == "__main__":
     dato6=int(input("Ingrese un dato6: "))
     dato7=int(input("Ingrese un dato7: "))
     dato8=int(input("Ingrese un dato8: "))
+    
+     #Proceso de Agregar bordes al gráfico con peso predeterminado = 1
+    """Esta la congugacion de cada uno de los valores dependeiendi el nodo al que se encuentra"""
+    grafo.add_grafo(dato1, dato2, dato1)
+    grafo.add_grafo(dato1, dato3, dato1)  
+    grafo.add_grafo(dato2,dato4,dato2)
+    grafo.add_grafo(dato2,dato5,dato2)
+    grafo.add_grafo(dato3,dato6,dato3)
+    grafo.add_grafo(dato3,dato7,dato3)
+    grafo.add_grafo(dato3,dato8,dato3)
+    grafo.add_grafo(dato5,dato6,dato5)
