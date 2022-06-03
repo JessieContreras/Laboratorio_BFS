@@ -72,3 +72,10 @@ if __name__ == "__main__":
     grafo.add_grafo(dato3,dato7,dato3)
     grafo.add_grafo(dato3,dato8,dato3)
     grafo.add_grafo(dato5,dato6,dato5)
+    
+     # Imprime las listas adyacentes  con su respectivo nodo y peso del borde.
+    grafo.print_adj_lista()
+    
+    traversal_path = []
+    traversal_path = grafo.dfs(0, 8)
+    print(f" El camino transversal del nodo 1 al 8 nodo es {dato1, dato2, dato5, dato6, dato3, dato8}")
